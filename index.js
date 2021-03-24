@@ -66,8 +66,8 @@ function updateProjDetails(proj) {
     let description = document.getElementById("description");
     description.innerHTML = projects[proj]["description"];
     let liveLink = document.getElementById("live-link");
-    liveLink.innerHTML = projects[proj]["live-link"];
+    liveLink.href = projects[proj]["live-link"]
     let githubRepo = document.getElementById("github-repo");
-    githubRepo.innerHTML = projects[proj]["github-repo"];
+    githubRepo.href = projects[proj]["github-repo"];
 }
 
