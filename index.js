@@ -61,5 +61,16 @@ function updateProjDetails(proj) {
     liveLink.href = projects[proj]["live-link"]
     let githubRepo = document.getElementById("github-repo");
     githubRepo.href = projects[proj]["github-repo"];
+    // loop through project names and indicate active project
+    const projBar = document.getElementById("projects-bar");
+    let projs = projBar.children;
+    projs = Array.from(projs);
+    projs.forEach((el) => {
+        if (el.innerHTML == proj) {
+            el.classList.add("active");
+        } else {
+            el.classList.remove("active");
+        }
+    });
 }
 
